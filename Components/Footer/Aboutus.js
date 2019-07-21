@@ -18,7 +18,9 @@ import Button from '@material-ui/core/Button';
 import Divider from '@material-ui/core/Divider';
 import Container from '@material-ui/core/Container';
 import banner from './aboutus.png';
-import ButnAppBar from '../NavBAr/bar';
+import Nabar from '../NavBAr/bar'
+import Foter from '../Footer/newFooter'
+
 
 
 
@@ -93,9 +95,10 @@ const useStyles = makeStyles(theme => ({
     render(){
       return ( 
     <React.Fragment>
-      <ButnAppBar />
+      <Nabar/>
       <CssBaseline />
       <Container maxWidth="lg">
+      <br/>
         <main>
        
           <Grid container spacing={5} >
@@ -130,7 +133,10 @@ We at shopee believe in high quality and exceptional customer service. But most 
            
             </Grid>
         </main>
+        
+                
       </Container>
+      <Foter/>
     </React.Fragment>
  )};
 }

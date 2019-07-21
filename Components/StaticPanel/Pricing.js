@@ -14,9 +14,11 @@ import Typography from '@material-ui/core/Typography';
 import Link from '@material-ui/core/Link';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
-import ButnAppBar from '../NavBAr/bar';
+
 import { withStyles } from '@material-ui/core/styles';
 import PropTypes from 'prop-types';
+import Nabar from '../NavBAr/bar'
+import Foter from '../Footer/newFooter'
 
 const newstyle ={
   background:'#0781bd'
@@ -125,7 +127,7 @@ const tiers = [
     return (
 
     <React.Fragment>
-       <ButnAppBar />
+       <Nabar/>
       <CssBaseline />
       <br></br>
       <br></br>
@@ -183,6 +185,7 @@ const tiers = [
           ))}
         </Grid>
       </Container>
+      <Foter/>
     </React.Fragment>
 
 )};

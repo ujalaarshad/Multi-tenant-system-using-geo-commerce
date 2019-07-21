@@ -13,7 +13,9 @@ import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import {withRouter} from 'react-router-dom';
-import ButnAppBar from '../NavBAr/bar';
+import Nabar from '../NavBAr/bar'
+import Foter from '../Footer/newFooter'
+
 const useStyles = makeStyles(theme => ({
   '@global': {
     body: {
@@ -21,7 +23,7 @@ const useStyles = makeStyles(theme => ({
     },
   },
   paper: {
-    marginTop: theme.spacing(8),
+    marginTop: theme.spacing(12),
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
@@ -54,18 +56,23 @@ paper= {
     render(){
       return (
 <React.Fragment>
-       <ButnAppBar />
+      <Nabar/>
        <br></br>
        <br></br>
        <br></br>
 
 
     <Container component="main" maxWidth="xs">
+    <br/>
+    <br/>
       <CssBaseline />
       <div style={paper}>
+      <br/>
         <Typography component="h1" variant="h5">
        Contact Us
         </Typography>
+        <br/>
+        <br/>
         <form style={form} noValidate>
           <Grid container spacing={2}>
             <Grid item xs={12} sm={6}>
@@ -111,6 +118,8 @@ paper= {
               
             </Grid>
           </Grid>
+          <br/>
+          
           <Button
             type="submit"
             fullWidth
@@ -120,14 +129,19 @@ paper= {
           >
             Send
           </Button>
+          <br/>
+          <br/>
           <Grid container justify="flex-end" >
             
           </Grid>
         </form>
+        <br/>
+        
       </div>
       
      
     </Container>
+    <Foter/>
     </React.Fragment>
   
   )};
