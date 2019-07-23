@@ -1,33 +1,33 @@
 import React,{Component} from 'react';
 
-import Nabar from './components/NavBAr/bar';
 import {BrowserRouter as Router , Switch, Route} from "react-router-dom";
-import './App.css';
-import CE from './components/ForgetPassword/ConfirmFromEmail';
-import FP from './components/ForgetPassword/ForgetPassword';
-import ConfirmNPass from './components/ForgetPassword/CreateNewPassword';
-import Footer from './components/Footer/newFooter';
-import managesales from './components/MANAGE/ManageSales';
-import manageinvent from './components/MANAGE/ManageInventory';
-import Addusers from './components/addUsers/AddUsers';
-import dropdown from './components/addUsers/dropdown';
-import Cntctus from './components/Footer/Contactus';
-import Abtus from './components/Footer/Aboutus';
-import UserE from './components/addUsers/EditUser';
-import Pricing from './components/StaticPanel/Pricing';
-import Home from './components/StaticPanel/Home';
 
-import storage from "./components/superadminpanel/Storage";
-import MaterialTableDemo from "./components/superadminpanel/table";
-import ResponsiveDrawer from "./components/superadminpanel/dr";
-import MaterialTable from "./components/superadminpanel/table_Generateplan";
-import HigherOrderComponent from "./components/Login/Login_view"
-import ImageLoader from "./components/Market/featured_product";
-import increased_sales from "./components/Market/Increased_sale";
-import Register from "./components/Account/Register";
-import CreateRoles from "./components/DefineRoles/CreateRoles";
-import Roles from "./components/DefineRoles/Roles";
-import Manage from "./components/Account/Manage";
+import ConfirmationCode from '../components/Core/Account/ForgetPassword/ConfirmationCode';
+import ForgetPassword from '../components/Core/Account/ForgetPassword/ForgetPassword.js';
+import ConfirmNPass from '../components/Core/Account/ForgetPassword/CreateNewPassword';
+
+import managesales from '../components/Services Accquisition Protocol/Manage/ManageSales';
+import manageinvent from '../components/Services Accquisition Protocol/Manage/ManageInventory';
+import Addusers from '../components/Admin Panel/Manage Users/AddUsers';
+import dropdown from '../components/Admin Panel/Manage Users/dropdown';
+import Cntctus from '../components/Services Accquisition Protocol/ContactUs/Contactus.js';
+import Abtus from '../components/Services Accquisition Protocol/AboutUs/Aboutus.js';
+import UserEdit from '../components/Admin Panel/Manage Users/EditUser';
+import Pricing from '../components/Services Accquisition Protocol/Pricing/Pricing.js';
+import Home from '../components/Services Accquisition Protocol/Home/Home.js';
+
+import Addstorage from "../components/Super Admin Panel/Storage/AddStorage";
+import ViewPlan from "../components/Super Admin Panel/table";
+import SuperAdminSidebar from "../components/Core/Layout/SuperAdminSideBar";
+import GeneratePlan from "../components/Super Admin Panel/Generate Plans/GeneratePlan";
+import LoginView from "../components/Core/Account/Login/Login_view"
+import FeaturedProducts from "../components/Services Accquisition Protocol/Market/FeaturedProducts";
+import increased_sales from "../components/Services Accquisition Protocol/Market/IncreasedSales";
+import Register from "../components/Core/Account/Register/Register";
+import EmailConfirm from '../components/Core/Account/Register/EmailConfirmation';
+import CreateRoles from "../components/Admin Panel/Manage Roles/CreateRoles";
+import Roles from "../components/Admin Panel/Manage Roles/Roles";
+import ProfileManage from "../components/Core/Account/ProfileManage/Manage";
 
 
 
@@ -43,29 +43,30 @@ class routes extends React.Component {
               
               
                 <Switch>
-                <Route exact path="/table" component={MaterialTableDemo} />
-                <Route exact path="/Register" component={Register} />
-                <Route exact path="/CreateRoles" component={CreateRoles} />
-                <Route exact path="/Roles" component={Roles} />
-                <Route exact path="/Manage" component={Manage} />
+                  <Route exact path = "/EmailConfirmation" component={EmailConfirm}/>
+                  <Route exact path="/table" component={ViewPlan} />
+                  <Route exact path="/Register" component={Register} />
+                  <Route exact path="/CreateRoles" component={CreateRoles} />
+                  <Route exact path="/Roles" component={Roles} />
+                  <Route exact path="/Manage" component={ProfileManage} />
 
-                <Route exact path="/storage" component={storage} />
-                <Route exact path="/superadminpanel" component={ResponsiveDrawer} />
-                <Route exact path="/MaterialTableDemo" component={MaterialTable} />
-                <Route exact path="/SignIn" component={HigherOrderComponent} />
-                <Route exact path="/featured_product" component={ImageLoader} />
-                <Route exact path="/Increased_sale" component={increased_sales} />
+                  <Route exact path="/storage" component={Addstorage} />
+                  <Route exact path="/superadminpanel" component={SuperAdminSidebar} />
+                  <Route exact path="/MaterialTableDemo" component={GeneratePlan} />
+                  <Route exact path="/SignIn" component={LoginView} />
+                  <Route exact path="/featured_product" component={FeaturedProducts} />
+                  <Route exact path="/Increased_sale" component={increased_sales} />
                   <Route exact path= "/Home" component={Home} />
                   <Route exact path= "/Pricing" component={Pricing} />
-                  <Route exact path= "/EditUsers" component={UserE} />
+                  <Route exact path= "/EditUsers" component={UserEdit} />
                   <Route exact path= "/Contactus" component={Cntctus} />
                   <Route exact path= "/Aboutus" component={Abtus} />
                   <Route exact path= "/dropdown" component={dropdown} />
                   <Route exact path= "/AddUsers" component={Addusers} />
-                  <Route exact path= "/ForgetPassword" component={FP} />
+                  <Route exact path= "/ForgetPassword" component={ForgetPassword} />
                   <Route exact path= "/managesales" component={managesales} />
                   <Route exact path= "/manageInventory" component={manageinvent} />
-                  <Route exact path= "/ForgetPassword/ConfirmFromEmail" component={CE} />
+                  <Route exact path= "/ForgetPassword/ConfirmFromEmail" component={ConfirmationCode} />
                   <Route exact path= "/ForgetPassword/ConfirmFromEmail/CreateNewPassword" component={ConfirmNPass} />
                   
                 </Switch>

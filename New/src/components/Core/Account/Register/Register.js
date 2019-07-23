@@ -8,9 +8,8 @@ import Typography from "@material-ui/core/Typography";
 import { withStyles } from "@material-ui/core/styles";
 import Container from "@material-ui/core/Container";
 import { NavLink } from 'react-router-dom'
-import { withRouter } from "react-router-dom";
-import Bar from "../NavBAr/bar";
-import Footer from "../Footer/Footer";
+import Footer from "../../Layout/Footer";
+import Bar from "../../Layout/NavBar";
 
 const styles = theme => ({
   "@global": {
@@ -31,6 +30,7 @@ const styles = theme => ({
   form: {
     width: "100%", // Fix IE 11 issue.
     marginTop: theme.spacing(3)
+    
   },
   submit: {
     margin: theme.spacing(3, 0, 2),

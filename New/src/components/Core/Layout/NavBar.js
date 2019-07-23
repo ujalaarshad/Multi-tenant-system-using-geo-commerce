@@ -49,7 +49,7 @@ const useStyles = makeStyles(theme => ({
     display: 'flex',
   },
   search: {
-    marginTop:theme.spacing(0.6),
+    marginTop:theme.spacing(0.17),
     position: 'relative',
     size:'medium',
     borderRadius: theme.shape.borderRadius,
@@ -268,7 +268,7 @@ export default function PrimarySearchAppBar() {
             <MenuIcon />
           </Button>
           <NavLink to="/Home" className={classes.search}  style={{color:"white",textDecoration: 'none'}} >
-          <Button  color="inherit" noWrap>
+          <Button  color="inherit" className={classes.search} noWrap>
           Home
             </Button>
             </NavLink>

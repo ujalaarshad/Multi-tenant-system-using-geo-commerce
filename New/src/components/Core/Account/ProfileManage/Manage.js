@@ -9,7 +9,7 @@ import TableBody from "@material-ui/core/TableBody";
 import TableCell from "@material-ui/core/TableCell";
 import TableRow from "@material-ui/core/TableRow";
 import EditIcon from "@material-ui/icons/EditOutlined";
-import Drawer from "../NavBAr/drawerresp";
+import Drawer from "../../Layout/AdminSideBar";
 import IconButton from "@material-ui/core/IconButton";
 import Redirect from "react-router-dom/Redirect";
 import {NavLink} from "react-router-dom";

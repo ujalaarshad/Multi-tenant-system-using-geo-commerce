@@ -1,6 +1,5 @@
 import React ,{Component}from 'react';
-import {withRouter} from 'react-router-dom';
-import AppBar from '@material-ui/core/AppBar';
+
 import Button from '@material-ui/core/Button';
 import Card from '@material-ui/core/Card';
 import CardActions from '@material-ui/core/CardActions';
@@ -9,16 +8,15 @@ import CardHeader from '@material-ui/core/CardHeader';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Grid from '@material-ui/core/Grid';
 import StarIcon from '@material-ui/icons/StarBorder';
-import Toolbar from '@material-ui/core/Toolbar';
+
 import Typography from '@material-ui/core/Typography';
-import Link from '@material-ui/core/Link';
-import { makeStyles } from '@material-ui/core/styles';
+
 import Container from '@material-ui/core/Container';
 
 import { withStyles } from '@material-ui/core/styles';
 import PropTypes from 'prop-types';
-import Nabar from '../NavBAr/bar'
-import Foter from '../Footer/newFooter'
+import NavBar from '../../Core/Layout/NavBar';
+import Footer from '../../Core/Layout/Footer';
 
 const newstyle ={
   background:'#0781bd'
@@ -92,20 +90,14 @@ const tiers = [
     price: '0',
     description: ['10 users included', '2 GB of storage', 'Help center access', 'Email support'],
     buttonText: 'Sign up for free',
-    buttonVariant: 'outlined',
+   
   },
   {
     title: 'Pro',
-    subheader: 'Most popular',
     price: '15',
-    description: [
-      '20 users included',
-      '10 GB of storage',
-      'Help center access',
-      'Priority email support',
-    ],
+    description: ['15 users included', '10 GB of storage', 'Help center access', 'Email support'],
     buttonText: 'Get started',
-    buttonVariant: 'contained',
+   
   },
   {
     title: 'Enterprise',
@@ -117,7 +109,7 @@ const tiers = [
       'Phone & email support',
     ],
     buttonText: 'Get started',
-    buttonVariant: 'contained',
+  
     color:"#224e6a",
   },
 ];
@@ -127,7 +119,7 @@ const tiers = [
     return (
 
     <React.Fragment>
-       <Nabar/>
+       <NavBar/>
       <CssBaseline />
       <br></br>
       <br></br>
@@ -139,8 +131,8 @@ const tiers = [
         Manage your business with us
         </Typography>
         <Typography variant="h5" align="center"  component="p">
-          Quickly build an effective pricing table for your potential customers with this layout.
-          It&apos;s built with default Material-UI components with little customization.
+          Quickly select an effective pricing plan for your business
+         
         </Typography>
       </Container>
       {/* End hero unit */}
@@ -185,7 +177,7 @@ const tiers = [
           ))}
         </Grid>
       </Container>
-      <Foter/>
+      <Footer/>
     </React.Fragment>
 
 )};

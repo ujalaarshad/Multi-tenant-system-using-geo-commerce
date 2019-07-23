@@ -43,6 +43,7 @@ const useStyles = makeStyles(theme => ({
     position:'absolute',
     
     marginTop: theme.spacing(8),
+    
     paddingTop: theme.spacing(3),
     paddingBottom: theme.spacing(3),
     color:"#FFFFFF",

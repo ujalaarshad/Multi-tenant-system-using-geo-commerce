@@ -18,8 +18,9 @@ import DialogActions from '@material-ui/core/DialogActions';
 import DialogContent from '@material-ui/core/DialogContent';
 import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
-import MaterialTableDemo from './table_Generateplan';
+import MaterialTableDemo from './ViewPlans';
 import {Link} from 'react-router-dom';
+
 const useStyles = makeStyles(theme => ({
   root: {
     display: 'flex',
@@ -161,7 +162,7 @@ export default function UserRolesDropDown() {
           </Button>
           <br></br>
           <br></br>
-              <Link component={Link} to="/MaterialTableDemo" variant="body2">
+              <Link component={Link} to="/table" variant="body2">
                 Edit the Plan
               </Link>
       <Dialog open={open} onClose={handleClose} aria-labelledby="form-dialog-title">

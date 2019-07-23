@@ -16,12 +16,12 @@ import MenuIcon from '@material-ui/icons/Menu';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
-import Bandwidth from './Bandwidth';
-import Storage from './Storage';
-import UserRolesDropDown from './dropdown';
+import Bandwidth from '../../Super Admin Panel/Bandwidth/AddBandwidth';
+import Storage from '../../Super Admin Panel/Storage/AddStorage';
+import UserRolesDropDown from '../../Super Admin Panel/Generate Plans/GeneratePlan';
 
-import Duration from './Duration';
-import StaffAccounts from './StaffAcounts';
+import Duration from '../../Super Admin Panel/Duration/AddDuration';
+import StaffAccounts from '../../Super Admin Panel/Staff Accounts/AddStaffAcounts';
 
 const drawerWidth = 240;
 

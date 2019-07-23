@@ -8,8 +8,8 @@ import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
-import Nabar from '../NavBAr/bar'
-import Foter from '../Footer/newFooter'
+import Footer from "../../Layout/Footer";
+import Bar from "../../Layout/NavBar";
 
 
 
@@ -43,7 +43,7 @@ export default function SignIn() {
 
   return (
     <div>
-      <Nabar/>
+      <Bar/>
     <Container component="main" maxWidth="xs">
       <CssBaseline />
       <div className={classes.paper}>
@@ -93,7 +93,7 @@ export default function SignIn() {
       </div>
       
     </Container>
-    <Foter/>
+    <Footer/>
     </div>
   );
 }

@@ -7,11 +7,11 @@ import Grid from "@material-ui/core/Grid";
 import Button from "@material-ui/core/Button";
 import Divider from "@material-ui/core/Divider";
 import Container from "@material-ui/core/Container";
-import banner from "./managesales.jpg";
-import banner1 from "./managesales1.jpg";
+import banner from "../../Images/managesales.jpg";
+import banner1 from "../../Images/managesales1.jpg";
 import Image from 'material-ui-image'
-import Nabar from '../NavBAr/bar'
-import Foter from '../Footer/newFooter'
+import NavBar from '../../Core/Layout/NavBar';
+import Footer from '../../Core/Layout/Footer';
 import {NavLink} from "react-router-dom";
 
 const useStyles = makeStyles(theme => ({
@@ -36,10 +36,11 @@ const useStyles = makeStyles(theme => ({
   
 }));
 
-const Imagewidth = {
-    width:"480px",
-    height:"320px",
-}
+const newStyles = {
+  width: 480,
+  height: 280,
+  padding: '0 30px',
+};
 
 
 function ManageSales() {
@@ -47,7 +48,7 @@ function ManageSales() {
 
   return (
     <React.Fragment>
-      <Nabar/>
+      <NavBar/>
       <CssBaseline />
       <Container maxWidth="lg">
         <main>
@@ -66,19 +67,19 @@ function ManageSales() {
               <Divider />
             </Grid>
 
-            <Grid item xs={12} md={5} className={classes.imageStyle}>
-              <Paper className={classes.paperStyle}>
-                <img width="480px" height="320px" src={banner} />
-              </Paper>
+            <Grid item xs={12} md={5} className={classes.imageStyle} align="center">
+              
+            < Image  src ={banner} style={newStyles} />
+              
             </Grid>
           </Grid>
 
           <Grid container spacing={5} className={classes.responsiveDirection}>
-            <Grid item xs={12} md={5} className={classes.imageStyle}>
-              <Paper className={classes.paperStyle} >
-                  < Image  src ={banner1} />
+            <Grid item xs={12} md={5} className={classes.imageStyle} align="center">
+              
+                  < Image  src ={banner1} style= {newStyles} />
                 
-              </Paper>
+              
             </Grid>
 
             <Grid item xs={12} md={7}>
@@ -113,7 +114,7 @@ function ManageSales() {
           </Typography>
         </main>
       </Container>
-      <Foter/>
+      <Footer/>
     </React.Fragment>
   );
 }

@@ -1,26 +1,18 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
-import Toolbar from '@material-ui/core/Toolbar';
-import IconButton from '@material-ui/core/IconButton';
-import SearchIcon from '@material-ui/icons/Search';
-import Paper from '@material-ui/core/Paper';
+
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
-import Card from '@material-ui/core/Card';
-import CardActionArea from '@material-ui/core/CardActionArea';
-import CardContent from '@material-ui/core/CardContent';
-import CardMedia from '@material-ui/core/CardMedia';
-import Hidden from '@material-ui/core/Hidden';
-import Link from '@material-ui/core/Link';
+
 import Button from '@material-ui/core/Button';
 import Divider from '@material-ui/core/Divider';
 import Container from '@material-ui/core/Container';
-import banner from './banner3.png'
-import abc from './abc.jpg';
+import banner from '../../Images/banner3.png'
+import abc from '../../Images/abc.jpg';
 import Image from 'material-ui-image';
-import Nabar from '../NavBAr/bar'
-import Foter from '../Footer/newFooter'
+import NavBar from '../../Core/Layout/NavBar';
+import Footer from '../../Core/Layout/Footer';
 import {NavLink} from "react-router-dom";
 
 
@@ -34,9 +26,9 @@ const useStyles = makeStyles(theme => ({
   
 }));
 const newStyles = {
-width : '480px',
-height : '320px' 
-
+  width: 480,
+  height: 280,
+  padding: '0 30px',
 };
 
 
@@ -51,7 +43,7 @@ export default function Blog() {
   return (
     
     <React.Fragment>
-      <Nabar/>
+      <NavBar/>
       <CssBaseline />
       <Container maxWidth="lg">
         
@@ -85,18 +77,14 @@ export default function Blog() {
             {/* End main content */}
             {/* Sidebar */}
 
-            <Grid item xs={12} md={5} >
+            <Grid item xs={12} md={5} align="center" >
                 <br/>
                 <br/>
                 
                 
                 
                     
-                <img
-                width = '480px'
-                height = '320px' 
-                src={banner}
-              />
+                < Image  src ={banner} style={newStyles} />
                 
                 <br/>
                 <br/>
@@ -110,18 +98,14 @@ export default function Blog() {
 
           <Grid container spacing={5} className={classes.mainGrid}>
             {/* Main content */}
-            <Grid item xs={12} md={5} >
+            <Grid item xs={12} md={5} align="center" >
                 <br/>
                 <br/>
                 
                 
                 
                     
-             <img
-                width = '480px'
-                height = '320px' 
-                src={abc}
-              />
+                < Image  src ={abc} style={newStyles}/>
                 
                 <br/>
                 <br/>
@@ -187,7 +171,7 @@ Track the source
       {/* Footer */}
       
       {/* End footer */}
-      <Foter/>
+      <Footer/>
     </React.Fragment>
     
   );

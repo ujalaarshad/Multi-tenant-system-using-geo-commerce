@@ -7,11 +7,11 @@ import Grid from "@material-ui/core/Grid";
 import Button from "@material-ui/core/Button";
 import Divider from "@material-ui/core/Divider";
 import Container from "@material-ui/core/Container";
-import logo from "../Images/logo.png";
-import banner from "../Images/managesales.jpg";
+import logo from "../../Images/logo.png";
+import banner from "../../Images/managesales.jpg";
 import Link from "@material-ui/core/Link";
-import Footer from "../Footer/newFooter";
-import Bar from "../NavBAr/bar";
+import Footer from "../../Core/Layout/Footer";
+import Bar from "../../Core/Layout/NavBar";
 import { NavLink } from 'react-router-dom'
 
 const useStyles = makeStyles(theme => ({

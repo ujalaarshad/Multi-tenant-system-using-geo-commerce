@@ -1,26 +1,17 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
-import Toolbar from '@material-ui/core/Toolbar';
-import IconButton from '@material-ui/core/IconButton';
-import SearchIcon from '@material-ui/icons/Search';
 import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
-import Card from '@material-ui/core/Card';
-import CardActionArea from '@material-ui/core/CardActionArea';
-import CardContent from '@material-ui/core/CardContent';
-import CardMedia from '@material-ui/core/CardMedia';
-import Hidden from '@material-ui/core/Hidden';
-import Link from '@material-ui/core/Link';
 import Button from '@material-ui/core/Button';
 import Divider from '@material-ui/core/Divider';
 import Container from '@material-ui/core/Container';
-import banner from './manageinventory.jpeg'
-import Nabar from '../NavBAr/bar'
-import Foter from '../Footer/newFooter'
+import banner from '../../Images/manageinventory.jpeg';
+import NavBar from '../../Core/Layout/NavBar';
+import Footer from '../../Core/Layout/Footer';
 import {NavLink} from "react-router-dom";
-
+import Image from 'material-ui-image';
 
 
 const useStyles = makeStyles(theme => ({
@@ -94,59 +85,27 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-const sections = [
-  'Technology',
-  'Design',
-  'Culture',
-  'Business',
-  'Politics',
-  'Opinion',
-  'Science',
-  'Health',
-  'Style',
-  'Travel',
-];
-
-const featuredPosts = [
-  {
-    title: 'Featured post',
-    date: 'Nov 12',
-    description:
-      'This is a wider card with supporting text below as a natural lead-in to additional content.',
-  },
-  {
-    title: 'Post title',
-    date: 'Nov 11',
-    description:
-      'This is a wider card with supporting text below as a natural lead-in to additional content.',
-  },
-];
+const newStyles = {
+  width: 480,
+  height: 280,
+  padding: '0 30px',
+};
 
 
 
-const archives = [
-  'March 2020',
-  'February 2020',
-  'January 2020',
-  'December 2019',
-  'November 2019',
-  'October 2019',
-  'September 2019',
-  'August 2019',
-  'July 2019',
-  'June 2019',
-  'May 2019',
-  'April 2019',
-];
 
-const social = ['GitHub', 'Twitter', 'Facebook'];
+
+
+
+
+
 
 export default function Blog() {
   const classes = useStyles();
 
   return (
     <React.Fragment>
-      <Nabar/>
+      <NavBar/>
       <CssBaseline />
       <Container maxWidth="lg">
         
@@ -193,19 +152,16 @@ Track the source
             {/* End main content */}
             {/* Sidebar */}
 
-            <Grid item xs={12} md={5} >
+            <Grid item xs={12} md={5} align="center" >
                 <br/>
                 <br/>
                 
                 
-                <Paper >
+                
                     
-                <img
-                width = '480px'
-                height = '320px' 
-                src={banner}
-              />
-                </Paper>
+                < Image  src ={banner} style={newStyles} />
+              
+                
                 <br/>
                 <br/>
                 <br/>
@@ -218,19 +174,15 @@ Track the source
 
           <Grid container spacing={5} className={classes.mainGrid}>
             {/* Main content */}
-            <Grid item xs={12} md={5} >
+            <Grid item xs={12} md={5} align="center" >
                 <br/>
                 <br/>
                 
                 
-                <Paper >
+                
                     
-                <img
-                width = '480px'
-                height = '320px' 
-                src={banner}
-              />
-                </Paper>
+                < Image  src ={banner} style={newStyles} />
+                
                 <br/>
                 <br/>
                 <br/>
@@ -301,7 +253,7 @@ Track the source
       {/* Footer */}
       
       {/* End footer */}
-      <Foter/>
+      <Footer/>
     </React.Fragment>
   );
 }
