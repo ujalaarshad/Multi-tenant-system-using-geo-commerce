@@ -1,42 +1,42 @@
-import React from 'react';
+import React from "react";
 
-import Button from '@material-ui/core/Button';
-import CssBaseline from '@material-ui/core/CssBaseline';
-import TextField from '@material-ui/core/TextField';
+import Button from "@material-ui/core/Button";
+import CssBaseline from "@material-ui/core/CssBaseline";
+import TextField from "@material-ui/core/TextField";
 
-import Typography from '@material-ui/core/Typography';
-import { makeStyles } from '@material-ui/core/styles';
-import Container from '@material-ui/core/Container';
-import Dropdown from './dropdown';
-import Grid from '@material-ui/core/Grid';
-import Drawer from "../../Core/Layout/AdminSideBar";
+import Typography from "@material-ui/core/Typography";
+import { makeStyles } from "@material-ui/core/styles";
+import Container from "@material-ui/core/Container";
+import Dropdown from "./dropdown";
+import Grid from "@material-ui/core/Grid";
+import Drawer from "../../Core/Layout/AdminSideBar/AdminSideBar";
 
 const useStyles = makeStyles(theme => ({
-  '@global': {
+  "@global": {
     body: {
-      backgroundColor: theme.palette.common.white,
-    },
+      backgroundColor: theme.palette.common.white
+    }
   },
   root: {
-    display: 'flex',
+    display: "flex"
   },
   paper: {
     marginTop: theme.spacing(15),
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center"
   },
   avatar: {
     margin: theme.spacing(1),
-    backgroundColor: theme.palette.secondary.main,
+    backgroundColor: theme.palette.secondary.main
   },
   form: {
-    width: '100%', // Fix IE 11 issue.
-    marginTop: theme.spacing(1),
+    width: "100%", // Fix IE 11 issue.
+    marginTop: theme.spacing(1)
   },
   submit: {
-    margin: theme.spacing(3, 0, 2),
-  },
+    margin: theme.spacing(3, 0, 2)
+  }
 }));
 
 export default function SignIn() {
@@ -44,66 +44,60 @@ export default function SignIn() {
 
   return (
     <div className={classes.root}>
-    <Drawer/>
-    <Container component="main" maxWidth="xs">
-      <CssBaseline />
-      <div className={classes.paper}>
-        
-        <Typography component="h1" variant="h5">
-          Add Users
-        </Typography>
-        <form className={classes.form} noValidate>
-          <TextField
-            variant="outlined"
-            margin="normal"
-            required
-            fullWidth
-            id="user name"
-            label="User Name"
-            name="user name"
-            autoComplete="username"
-            autoFocus
-          />
-          <TextField
-            variant="outlined"
-            margin="normal"
-            required
-            fullWidth
-            id="email"
-            label="Email Address"
-            name="email"
-            autoComplete="email"
-          />
+      <Drawer />
+      <Container component="main" maxWidth="xs">
+        <CssBaseline />
+        <div className={classes.paper}>
+          <Typography component="h1" variant="h5">
+            Add Users
+          </Typography>
+          <form className={classes.form} noValidate>
+            <TextField
+              variant="outlined"
+              margin="normal"
+              required
+              fullWidth
+              id="user name"
+              label="User Name"
+              name="user name"
+              autoComplete="username"
+              autoFocus
+            />
+            <TextField
+              variant="outlined"
+              margin="normal"
+              required
+              fullWidth
+              id="email"
+              label="Email Address"
+              name="email"
+              autoComplete="email"
+            />
 
-<Grid container>
-            <Grid item xs>
-              <Dropdown />
+            <Grid container>
+              <Grid item xs>
+                <Dropdown />
+              </Grid>
             </Grid>
-           
-            
-          </Grid>
 
-
-
-
-          {/* <Dropdown 
+            {/* <Dropdown 
           variant="outlined"
           margin="normal"
           required
           fullWidth
           /> */}
-          <Button
-            type="submit"
-            fullWidth
-            variant="contained"
-            color="primary"
-            className={classes.submit}
-            style = {{background: "#0781bd"}}
-          >
-            Add User
-          </Button>
-          
-          {/* <Grid container>
+            <Button
+              type="submit"
+              fullWidth
+              variant="contained"
+              color="primary"
+              className={classes.submit}
+              style={{ background: "#0781bd" }}
+            >
+              Add User
+            </Button>
+
+            {/* <Grid container>
             <Grid item xs>
               <Link href="#" variant="body2">
                 Forgot password?
@@ -115,13 +109,9 @@ export default function SignIn() {
               </Link>
             </Grid>
           </Grid> */}
-        </form>
-        
-      </div>
-      
-    </Container>
-    
+          </form>
+        </div>
+      </Container>
     </div>
-    
   );
 }

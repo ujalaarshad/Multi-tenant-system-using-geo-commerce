@@ -1,5 +1,4 @@
-import React, { useState } from "react";
-import PropTypes from "prop-types";
+import React from "react";
 import AppBar from "@material-ui/core/AppBar";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import Divider from "@material-ui/core/Divider";
@@ -52,59 +51,28 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-export default function ResponsiveDrawer(props) {
-  const { container, getscreen } = props;
-
+const AdminSideBarView = props => {
   const classes = useStyles();
   const theme = useTheme();
-  const [mobileOpen, setMobileOpen] = React.useState(false);
-  const [selectItem, setItem] = useState("");
-
-  function handleDrawerToggle() {
-    setMobileOpen(!mobileOpen);
-  }
-
-  function set(text) {
-    setItem(text);
-    setNav();
-  }
-
-  function setNav() {
-    if (selectItem === "Add Roles") {
-      return <Redirect to="/CreateRoles" />;
-    } else if (selectItem === "Roles") {
-      return <Redirect to="/Roles" />;
-    }
-    else if (selectItem === "Manage") {
-      return <Redirect to="/Manage" />;
-  }
-  else if (selectItem === "Add Users"){
-    return <Redirect to="/AddUsers" />;
-  }
-  else if (selectItem === "Users"){
-    return <Redirect to="/EditUsers"/>;
-  }
-}
-
+  const { setNav, handleDrawerToggle, mobileOpen, handleItemSelect } = props;
   const drawer = (
     <div>
       <div className={classes.toolbar} />
       <Divider />
       <List>
-        {["Add Users", "Users", "Add Roles", "Roles", "Manage"].map((text, index) => (
-          <ListItem
-            onClick={() => {
-              setItem(text);
-            }}
-            button
-            key={text}
-          >
-            <ListItemIcon>
-              {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-            </ListItemIcon>
-            <ListItemText primary={text} />
-          </ListItem>
-        ))}
+        {["Add Users", "Users", "Add Roles", "Roles", "Manage"].map(
+          (text, index) => (
+            <ListItem
+              onClick={() => {
+                handleItemSelect(text);
+              }}
+              button
+              key={text}
+            >
+              <ListItemText primary={text} />
+            </ListItem>
+          )
+        )}
       </List>
     </div>
   );
@@ -134,7 +102,6 @@ export default function ResponsiveDrawer(props) {
         {/* The implementation can be swapped with js to avoid SEO duplication of links. */}
         <Hidden smUp implementation="css">
           <Drawer
-            container={container}
             variant="temporary"
             anchor={theme.direction === "rtl" ? "right" : "left"}
             open={mobileOpen}
@@ -166,4 +133,6 @@ export default function ResponsiveDrawer(props) {
       </main>
     </div>
   );
-}
+};
+
+export default AdminSideBarView;
