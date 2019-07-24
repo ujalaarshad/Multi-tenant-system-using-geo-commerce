@@ -17,7 +17,8 @@ import LastPage from '@material-ui/icons/LastPage';
 import Remove from '@material-ui/icons/Remove';
 import SaveAlt from '@material-ui/icons/SaveAlt';
 import Search from '@material-ui/icons/Search';
-import ViewColumn from '@material-ui/icons/ViewColumn';;
+import ViewColumn from '@material-ui/icons/ViewColumn';
+import Drawer from "../../Core/Layout/SuperAdminSideBar";
 
 
 const useStyles = makeStyles(theme => ({
@@ -25,7 +26,9 @@ const useStyles = makeStyles(theme => ({
     heroContent: {
       padding: theme.spacing(12, 0, 6)
     },
-    
+    root:{
+      display:"flex"
+    }
   }));
 
 
@@ -54,19 +57,23 @@ const tableIcons = {
 export default function MaterialTableDemo() {
   const [state, setState] = React.useState({
     columns: [
-      { title: 'Storage', field: 'storage' },
-      { title: 'Bandwidth', field: 'bandwidth' },
-      { title: 'Staff Accounts', field: 'Staffaccount' },
-      { title: 'Discount', field: 'Discount' },
+      { title: 'Bandwidth', field: 'Bandwidth' },
+      { title: 'Storage', field: 'Storage' },
+      { title: 'Duration', field: 'Duration' },
+      
+      {
+        title: 'Staff Account',
+        field: 'Staff'
+        
+      },
     ],
     data: [
         {
-            storage: '10GB',
-            bandwidth: '10GHZ',
-            Staffaccount:'10',
-            Discount:'0$',
+            Bandwidth: '15GHZ',
+            Storage: '10GB',
+            Duration:'1 Month',
+            Staff:'15',
           },
-          
       
     ],
   });
@@ -74,6 +81,8 @@ export default function MaterialTableDemo() {
   const classes = useStyles();
 
   return (
+    <div className={classes.root}>
+    <Drawer/>
     <Container maxWidth="md" component="main" className={classes.heroContent}>
     <MaterialTable icons={tableIcons}
       title="Edit Plan"
@@ -113,5 +122,7 @@ export default function MaterialTableDemo() {
       }}
     />
     </Container>
+    
+    </div>
   );
 }
