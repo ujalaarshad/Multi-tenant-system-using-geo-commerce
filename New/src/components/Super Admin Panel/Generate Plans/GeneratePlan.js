@@ -20,7 +20,7 @@ import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
 import MaterialTableDemo from './ViewPlans';
 import {Link} from 'react-router-dom';
-
+import Drawer from "../../Core/Layout/SuperAdminSideBar";
 const useStyles = makeStyles(theme => ({
   root: {
     display: 'flex',
@@ -46,6 +46,9 @@ const useStyles = makeStyles(theme => ({
    form: {
     width: '100%', // Fix IE 11 issue.
     marginTop: theme.spacing(1),
+  },
+  containerSpacing: {
+    marginTop: theme.spacing(12)
   },
 }));
 const newStyles = {
@@ -87,7 +90,8 @@ export default function UserRolesDropDown() {
   return (
     <div>
     <form className={classes.root} autoComplete="off">
-    <Container component="main" maxWidth="xs">
+    <Drawer />
+    <Container component="main" maxWidth="xs" className={classes.containerSpacing}>
       <CssBaseline />
       <div className={classes.paper}>
       <Typography component="h1" variant="h5">
@@ -149,6 +153,24 @@ export default function UserRolesDropDown() {
         </Select>
         
       </FormControl>
+      <FormControl variant="outlined"  className={classes.formControl}>
+        <InputLabel ref={inputLabel} htmlFor="outlined-age-simple">
+          Duration
+        </InputLabel>
+        <Select
+          value={values.age}
+          onChange={handleChange}
+          input={<OutlinedInput labelWidth={labelWidth} name="UserRoles" id="outlined-age-simple" />}
+        >
+          <MenuItem value="">
+            <em></em>
+          </MenuItem>
+          <MenuItem value={10}>1 Month</MenuItem>
+          <MenuItem value={20}>2 Month</MenuItem>
+          <MenuItem value={30}>10 Month</MenuItem>
+        </Select>
+        
+      </FormControl>
       <br></br>
       <br></br>
       <div>
@@ -162,9 +184,6 @@ export default function UserRolesDropDown() {
           </Button>
           <br></br>
           <br></br>
-              <Link component={Link} to="/table" variant="body2">
-                Edit the Plan
-              </Link>
       <Dialog open={open} onClose={handleClose} aria-labelledby="form-dialog-title">
         <DialogTitle id="form-dialog-title">Discounted Price</DialogTitle>
         <DialogContent>

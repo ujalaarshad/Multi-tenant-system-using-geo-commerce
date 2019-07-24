@@ -19,7 +19,14 @@ import { makeStyles, useTheme } from '@material-ui/core/styles';
 import Bandwidth from '../../Super Admin Panel/Bandwidth/AddBandwidth';
 import Storage from '../../Super Admin Panel/Storage/AddStorage';
 import UserRolesDropDown from '../../Super Admin Panel/Generate Plans/GeneratePlan';
-
+import ListSubheader from '@material-ui/core/ListSubheader';
+import Collapse from '@material-ui/core/Collapse';
+import DraftsIcon from '@material-ui/icons/Drafts';
+import SendIcon from '@material-ui/icons/Send';
+import ExpandLess from '@material-ui/icons/ExpandLess';
+import ExpandMore from '@material-ui/icons/ExpandMore';
+import StarBorder from '@material-ui/icons/StarBorder';
+import {Link} from 'react-router-dom';
 import Duration from '../../Super Admin Panel/Duration/AddDuration';
 import StaffAccounts from '../../Super Admin Panel/Staff Accounts/AddStaffAcounts';
 
@@ -48,6 +55,9 @@ const useStyles = makeStyles(theme => ({
       display: 'none',
     },
   },
+  nested: {
+    paddingLeft: theme.spacing(4),
+  },
   toolbar: theme.mixins.toolbar,
   drawerPaper: {
     width: drawerWidth,
@@ -70,6 +80,26 @@ export default function ResponsiveDrawer(props) {
   const { container, getscreen } = props;
   
   const classes = useStyles();
+  const [open, setOpen] = React.useState(false);
+  const [open1, setOpen1] = React.useState(false);
+  const [open2, setOpen2] = React.useState(false);
+  const [open3, setOpen3] = React.useState(false);
+   const [open4, setOpen4] = React.useState(false);
+  function handleClick1() {
+    setOpen1(!open1);
+  }
+  function handleClick2() {
+    setOpen2(!open2);
+  }
+  function handleClick3() {
+    setOpen3(!open3);
+  }
+  function handleClick4() {
+    setOpen4(!open4);
+  }
+  function handleClick() {
+    setOpen(!open);
+  }
   const theme = useTheme();
   const [mobileOpen, setMobileOpen] =React.useState(false);
   const [selectItem,setItem]=useState("")
@@ -97,13 +127,92 @@ else if (selectItem==='Generate Plan')
       <div className={classes.toolbar} />
       <Divider />
       <List>
-        {['Bandwidth', 'Storage', 'Staff Accounts','Duration','Generate Plan'].map((text, index) => (
-          <ListItem
-          onClick={()=>{setItem(text);}}
-           button key={text}>
-            <ListItemText primary={text} />
+        
+           <ListItem button onClick={handleClick1}>
+        <ListItemText primary="Bandwidth" />
+        {open1 ? <ExpandLess /> : <ExpandMore />}
+      </ListItem>
+      <Collapse in={open1} timeout="auto" unmountOnExit>
+        <List component="div" disablePadding>
+          <ListItem button className={classes.nested}>
+            <ListItemIcon>
+
+            </ListItemIcon>
+            <ListItemText primary="Edit" />
           </ListItem>
-        ))}
+          <ListItem button className={classes.nested} component={Link} to="/Bandwidth">
+            <ListItemIcon>
+            </ListItemIcon>
+            <ListItemText primary="Add" />
+          </ListItem>
+        </List>
+      </Collapse>
+       <ListItem button onClick={handleClick}>
+        <ListItemText primary="Storage" />
+        {open ? <ExpandLess /> : <ExpandMore />}
+      </ListItem>
+      <Collapse in={open} timeout="auto" unmountOnExit>
+        <List component="div" disablePadding>
+          <ListItem button className={classes.nested}>
+            <ListItemIcon>
+            </ListItemIcon>
+             <ListItemText primary="Edit" />
+          </ListItem>
+          <ListItem button className={classes.nested} component={Link} to="/Storage">
+            <ListItemIcon>
+            </ListItemIcon>
+             <ListItemText primary="Add" />
+          </ListItem>
+        </List>
+      </Collapse>
+      <ListItem button onClick={handleClick2}>
+        <ListItemText primary="Duration" />
+        {open2 ? <ExpandLess /> : <ExpandMore />}
+      </ListItem>
+      <Collapse in={open2} timeout="auto" unmountOnExit>
+        <ListItem button className={classes.nested}>
+            <ListItemIcon>
+              </ListItemIcon>
+             <ListItemText primary="Edit" />
+          </ListItem>
+          <ListItem button className={classes.nested} component={Link} to="/ADD_duration">
+            <ListItemIcon>
+            </ListItemIcon>
+             <ListItemText primary="Add" />
+          </ListItem>
+      </Collapse>
+      <ListItem button onClick={handleClick3}>
+        <ListItemText primary="Staff Acounts" />
+        {open3 ? <ExpandLess /> : <ExpandMore />}
+      </ListItem>
+      <Collapse in={open3} timeout="auto" unmountOnExit>
+        <ListItem button className={classes.nested}  >
+            <ListItemIcon>
+              </ListItemIcon>
+             <ListItemText primary="Edit" />
+          </ListItem>
+          <ListItem button className={classes.nested} component={Link} to="/StaffAccounts">
+            <ListItemIcon>
+            </ListItemIcon>
+             <ListItemText primary="Add"/>
+          </ListItem>
+      </Collapse>
+      <ListItem button onClick={handleClick4}>
+        <ListItemText primary="Generate Plan" />
+        {open4 ? <ExpandLess /> : <ExpandMore />}
+      </ListItem>
+      <Collapse in={open4} timeout="auto" unmountOnExit>
+        <ListItem button className={classes.nested} component={Link} to="/edit_plan">
+            <ListItemIcon>
+              </ListItemIcon>
+             <ListItemText primary="Edit" />
+          </ListItem>
+          <ListItem button className={classes.nested} component={Link} to="/plan">
+            <ListItemIcon>
+            </ListItemIcon>
+             <ListItemText primary="Create" />
+          </ListItem>
+      </Collapse>
       </List>
     
     </div>
@@ -162,29 +271,6 @@ else if (selectItem==='Generate Plan')
       </nav>
       <main className={classes.content}>
         <div className={classes.toolbar} />
-         {/* <Typography paragraph>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-          ut labore et dolore magna aliqua. Rhoncus dolor purus non enim praesent elementum
-          facilisis leo vel. Risus at ultrices mi tempus imperdiet. Semper risus in hendrerit
-          gravida rutrum quisque non tellus. Convallis convallis tellus id interdum velit laoreet id
-          donec ultrices. Odio morbi quis commodo odio aenean sed adipiscing. Amet nisl suscipit
-          adipiscing bibendum est ultricies integer quis. Cursus euismod quis viverra nibh cras.
-          Metus vulputate eu scelerisque felis imperdiet proin fermentum leo. Mauris commodo quis
-          imperdiet massa tincidunt. Cras tincidunt lobortis feugiat vivamus at augue. At augue eget
-          arcu dictum varius duis at consectetur lorem. Velit sed ullamcorper morbi tincidunt. Lorem
-          donec massa sapien faucibus et molestie ac.
-        </Typography>
-        <Typography paragraph>
-          Consequat mauris nunc congue nisi vitae suscipit. Fringilla est ullamcorper eget nulla
-          facilisi etiam dignissim diam. Pulvinar elementum integer enim neque volutpat ac
-          tincidunt. Ornare suspendisse sed nisi lacus sed viverra tellus. Purus sit amet volutpat
-          consequat mauris. Elementum eu facilisis sed odio morbi. Euismod lacinia at quis risus sed
-          vulputate odio. Morbi tincidunt ornare massa eget egestas purus viverra accumsan in. In
-          hendrerit gravida rutrum quisque non tellus orci ac. Pellentesque nec nam aliquam sem et
-          tortor. Habitant morbi tristique senectus et. Adipiscing elit duis tristique sollicitudin
-          nibh sit. Ornare aenean euismod elementum nisi quis eleifend. Commodo viverra maecenas
-          accumsan lacus vel facilisis. Nulla posuere sollicitudin aliquam ultrices sagittis orci a.
-        </Typography>  */}
      {showMe()}
 
       </main>
