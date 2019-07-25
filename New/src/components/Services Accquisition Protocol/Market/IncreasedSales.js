@@ -10,8 +10,8 @@ import Container from '@material-ui/core/Container';
 // import Increased_sale from './increased_sales.gif'
 import abc from '../../Images/abc.jpg';
 import location from '../../Images/Location.jpg';
-import Bar from "../../Core/Layout/NavBar";
-import Footer from "../../Core/Layout/Footer";
+import Bar from "../../Core/Layout/Navbar/NavBar";
+import Footer from "../../Core/Layout/Footer/Footer";
 import {NavLink} from "react-router-dom";
 import Image from 'material-ui-image';
 
@@ -90,7 +90,7 @@ const useStyles = makeStyles(theme => ({
 }));
 
 const newStyles = {
-  width: 480,
+  
   height: 280,
   padding: '0 30px',
 };

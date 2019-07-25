@@ -9,8 +9,8 @@ import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
-import Footer from "../../Layout/Footer";
-import Bar from "../../Layout/NavBar";
+import Footer from "../../../Layout/Footer/Footer";
+import Bar from "../../../Layout/Navbar/NavBar";
 
 const useStyles = makeStyles(theme => ({
   '@global': {
@@ -41,7 +41,7 @@ const useStyles = makeStyles(theme => ({
 
 
 
-export default function ConfirmFromEmail() {
+const ConfirmationCodeView = props => {
   const classes = useStyles();
 
   return (
@@ -95,4 +95,6 @@ export default function ConfirmFromEmail() {
     <Footer/>
     </div>
   );
-}
+};
+
+export default ConfirmationCodeView;

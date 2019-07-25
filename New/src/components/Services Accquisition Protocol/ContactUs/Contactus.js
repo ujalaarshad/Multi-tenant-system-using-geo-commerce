@@ -7,8 +7,8 @@ import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import {withRouter} from 'react-router-dom';
-import NavBar from '../../Core/Layout/NavBar';
-import Footer from '../../Core/Layout/Footer';
+import NavBar from '../../Core/Layout/Navbar/NavBar';
+import Footer from '../../Core/Layout/Footer/Footer';
 
 
 const useStyles = makeStyles(theme => ({

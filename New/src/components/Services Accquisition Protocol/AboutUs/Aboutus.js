@@ -6,8 +6,8 @@ import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 import Container from '@material-ui/core/Container';
 import banner from '../../Images/aboutus.png';
-import NavBar from '../../Core/Layout/NavBar';
-import Footer from '../../Core/Layout/Footer';
+import NavBar from '../../Core/Layout/Navbar/NavBar';
+import Footer from '../../Core/Layout/Footer/Footer';
 import Image from 'material-ui-image';
 
 const useStyles = makeStyles(theme => ({

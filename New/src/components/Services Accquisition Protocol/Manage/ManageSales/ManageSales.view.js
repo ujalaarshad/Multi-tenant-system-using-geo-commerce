@@ -1,17 +1,16 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import CssBaseline from "@material-ui/core/CssBaseline";
-import Paper from "@material-ui/core/Paper";
 import Typography from "@material-ui/core/Typography";
 import Grid from "@material-ui/core/Grid";
 import Button from "@material-ui/core/Button";
 import Divider from "@material-ui/core/Divider";
 import Container from "@material-ui/core/Container";
-import banner from "../../Images/managesales.jpg";
-import banner1 from "../../Images/managesales1.jpg";
+import banner from "../../../Images/managesales.jpg";
+import banner1 from "../../../Images/managesales1.jpg";
 import Image from 'material-ui-image'
-import NavBar from '../../Core/Layout/NavBar';
-import Footer from '../../Core/Layout/Footer';
+import NavBar from '../../../Core/Layout/Navbar/NavBar';
+import Footer from '../../../Core/Layout/Footer/Footer';
 import {NavLink} from "react-router-dom";
 
 const useStyles = makeStyles(theme => ({
@@ -37,13 +36,13 @@ const useStyles = makeStyles(theme => ({
 }));
 
 const newStyles = {
-  width: 480,
+  
   height: 280,
   padding: '0 30px',
 };
 
 
-function ManageSales() {
+const ManagesalesView = props =>{
   const classes = useStyles();
 
   return (
@@ -117,6 +116,6 @@ function ManageSales() {
       <Footer/>
     </React.Fragment>
   );
-}
+};
 
-export default ManageSales;
+export default ManagesalesView;

@@ -7,12 +7,11 @@ import Grid from '@material-ui/core/Grid';
 import Button from '@material-ui/core/Button';
 import Divider from '@material-ui/core/Divider';
 import Container from '@material-ui/core/Container';
-import banner from '../../Images/manageinventory.jpeg';
-import NavBar from '../../Core/Layout/NavBar';
-import Footer from '../../Core/Layout/Footer';
+import banner from '../../../Images/manageinventory.jpeg';
+import NavBar from '../../../Core/Layout/Navbar/NavBar';
+import Footer from '../../../Core/Layout/Footer/Footer';
 import {NavLink} from "react-router-dom";
 import Image from 'material-ui-image';
-
 
 const useStyles = makeStyles(theme => ({
   toolbar: {
@@ -86,21 +85,12 @@ const useStyles = makeStyles(theme => ({
 }));
 
 const newStyles = {
-  width: 480,
+ 
   height: 280,
   padding: '0 30px',
 };
 
-
-
-
-
-
-
-
-
-
-export default function Blog() {
+const ManageinventoryView = props =>{
   const classes = useStyles();
 
   return (
@@ -181,7 +171,8 @@ Track the source
                 
                 
                     
-                < Image  src ={banner} style={newStyles} />
+                < Image  src ={banner} style = {newStyles} />
+                
                 
                 <br/>
                 <br/>
@@ -256,4 +247,6 @@ Track the source
       <Footer/>
     </React.Fragment>
   );
-}
+};
+
+export default ManageinventoryView;

@@ -1,17 +1,15 @@
 import React from 'react';
-import Avatar from '@material-ui/core/Avatar';
+
 import Button from '@material-ui/core/Button';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import TextField from '@material-ui/core/TextField';
 
-import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
-import Footer from "../../Layout/Footer";
-import Bar from "../../Layout/NavBar";
-
-
+import Dropdown from '../dropdown';
+import Grid from '@material-ui/core/Grid';
+import Drawer from "../../../Core/Layout/AdminSideBar";
 
 const useStyles = makeStyles(theme => ({
   '@global': {
@@ -19,14 +17,17 @@ const useStyles = makeStyles(theme => ({
       backgroundColor: theme.palette.common.white,
     },
   },
+  root: {
+    display: 'flex',
+  },
   paper: {
-    marginTop: theme.spacing(8),
+    marginTop: theme.spacing(15),
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
   },
   avatar: {
-    margin: theme.spacing(5),
+    margin: theme.spacing(1),
     backgroundColor: theme.palette.secondary.main,
   },
   form: {
@@ -38,46 +39,59 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-export default function SignIn() {
+const Addusersview = props =>{
   const classes = useStyles();
 
   return (
-    <div>
-      <Bar/>
+    <div className={classes.root}>
+    <Drawer/>
     <Container component="main" maxWidth="xs">
       <CssBaseline />
       <div className={classes.paper}>
-        <Avatar className={classes.avatar}>
-          <LockOutlinedIcon />
-        </Avatar>
+        
         <Typography component="h1" variant="h5">
-          New Password
+          Add Users
         </Typography>
         <form className={classes.form} noValidate>
-        <TextField
+          <TextField
             variant="outlined"
             margin="normal"
             required
             fullWidth
-            name="password"
-            label="Password"
-            type="password"
-            id="password"
+            id="user name"
+            label="User Name"
+            name="user name"
+            autoComplete="username"
             autoFocus
-            
           />
           <TextField
             variant="outlined"
             margin="normal"
             required
             fullWidth
-            name="Confirm password"
-            label="Confirm Password"
-            type="password"
-            id="password"
-            
+            id="email"
+            label="Email Address"
+            name="email"
+            autoComplete="email"
           />
-          
+
+<Grid container>
+            <Grid item xs>
+              <Dropdown />
+            </Grid>
+           
+            
+          </Grid>
+
+
+
+
+          {/* <Dropdown 
+          variant="outlined"
+          margin="normal"
+          required
+          fullWidth
+          /> */}
           <Button
             type="submit"
             fullWidth
@@ -86,14 +100,30 @@ export default function SignIn() {
             className={classes.submit}
             style = {{background: "#0781bd"}}
           >
-            Submit
+            Add User
           </Button>
           
+          {/* <Grid container>
+            <Grid item xs>
+              <Link href="#" variant="body2">
+                Forgot password?
+              </Link>
+            </Grid>
+            <Grid item>
+              <Link href="#" variant="body2">
+                {"Don't have an account? Sign Up"}
+              </Link>
+            </Grid>
+          </Grid> */}
         </form>
+        
       </div>
       
     </Container>
-    <Footer/>
+    
     </div>
+    
   );
-}
+};
+
+export default Addusersview;

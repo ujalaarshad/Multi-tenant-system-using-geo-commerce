@@ -15,8 +15,8 @@ import Container from '@material-ui/core/Container';
 
 import { withStyles } from '@material-ui/core/styles';
 import PropTypes from 'prop-types';
-import NavBar from '../../Core/Layout/NavBar';
-import Footer from '../../Core/Layout/Footer';
+import NavBar from '../../Core/Layout/Navbar/NavBar';
+import Footer from '../../Core/Layout/Footer/Footer';
 
 const newstyle ={
   background:'#0781bd'

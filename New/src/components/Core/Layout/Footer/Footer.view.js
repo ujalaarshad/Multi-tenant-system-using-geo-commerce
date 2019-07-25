@@ -1,8 +1,6 @@
 import React from 'react';
-
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Grid from '@material-ui/core/Grid';
-
 import Typography from '@material-ui/core/Typography';
 import Link from '@material-ui/core/Link';
 import { makeStyles } from '@material-ui/core/styles';
@@ -98,7 +96,7 @@ const footers1 = [
 ];
 
 
-export default function Pricing() {
+const FooterView = props=> {
   const classes = useStyles();
 
   return (
@@ -179,4 +177,6 @@ export default function Pricing() {
       {/* End footer */}
     </React.Fragment>
   );
-}
+};
+
+export default FooterView;

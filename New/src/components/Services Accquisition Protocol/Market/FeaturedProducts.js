@@ -11,8 +11,8 @@ import Container from '@material-ui/core/Container';
 import banner from '../../Images/banner3.png'
 import abc from '../../Images/abc.jpg';
 import Image from 'material-ui-image';
-import NavBar from '../../Core/Layout/NavBar';
-import Footer from '../../Core/Layout/Footer';
+import NavBar from '../../Core/Layout/Navbar/NavBar';
+import Footer from '../../Core/Layout/Footer/Footer';
 import {NavLink} from "react-router-dom";
 
 
@@ -26,7 +26,7 @@ const useStyles = makeStyles(theme => ({
   
 }));
 const newStyles = {
-  width: 480,
+  
   height: 280,
   padding: '0 30px',
 };
