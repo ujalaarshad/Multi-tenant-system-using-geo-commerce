@@ -32,6 +32,10 @@ import EmailConfirm from "../components/Core/Account/Register/EmailConfirmation"
 import CreateRoles from "../components/Admin Panel/Manage Roles/CreateRoles/CreateRoles";
 import Roles from "../components/Admin Panel/Manage Roles/Roles/Roles";
 import ProfileManage from "../components/Core/Account/ProfileManage/Manage";
+import EditDuartion from "../components/Super Admin Panel/Duration/EditDuration";
+import EditBandwidth from "../components/Super Admin Panel/Bandwidth/EditBandwidth";
+import EditStorage from "../components/Super Admin Panel/Storage/EditStorage";
+import  EditStaffaccounts from  "../components/Super Admin Panel/Staff Accounts/EditStaffAccounts";
 
 class routes extends React.Component {
   render() {
@@ -85,6 +89,12 @@ class routes extends React.Component {
               path="/ForgetPassword/ConfirmFromEmail/CreateNewPassword"
               component={ConfirmNPass}
             />
+              <Route exact path="/edit_duration" component={EditDuartion} />
+                  
+                  <Route exact path="/edit_storage" component={EditStorage} />
+                  
+                  <Route exact path="/edit_bandwidth" component={EditBandwidth} />
+                  <Route exact path="/edit_staffAccounts" component={EditStaffaccounts} />
           </Switch>
         </Router>
       </div>

@@ -134,7 +134,7 @@ else if (selectItem==='Generate Plan')
       </ListItem>
       <Collapse in={open1} timeout="auto" unmountOnExit>
         <List component="div" disablePadding>
-          <ListItem button className={classes.nested}>
+          <ListItem button className={classes.nested} component={Link} to="/edit_bandwidth">
             <ListItemIcon>
 
             </ListItemIcon>
@@ -153,7 +153,7 @@ else if (selectItem==='Generate Plan')
       </ListItem>
       <Collapse in={open} timeout="auto" unmountOnExit>
         <List component="div" disablePadding>
-          <ListItem button className={classes.nested}>
+          <ListItem button className={classes.nested} component={Link} to="/edit_storage">
             <ListItemIcon>
             </ListItemIcon>
              <ListItemText primary="Edit" />
@@ -170,7 +170,7 @@ else if (selectItem==='Generate Plan')
         {open2 ? <ExpandLess /> : <ExpandMore />}
       </ListItem>
       <Collapse in={open2} timeout="auto" unmountOnExit>
-        <ListItem button className={classes.nested}>
+        <ListItem button className={classes.nested} component={Link} to="/edit_duration"> 
             <ListItemIcon>
               </ListItemIcon>
              <ListItemText primary="Edit" />
@@ -186,7 +186,7 @@ else if (selectItem==='Generate Plan')
         {open3 ? <ExpandLess /> : <ExpandMore />}
       </ListItem>
       <Collapse in={open3} timeout="auto" unmountOnExit>
-        <ListItem button className={classes.nested}  >
+        <ListItem button className={classes.nested} component={Link} to="/edit_staffAccounts"  >
             <ListItemIcon>
               </ListItemIcon>
              <ListItemText primary="Edit" />
