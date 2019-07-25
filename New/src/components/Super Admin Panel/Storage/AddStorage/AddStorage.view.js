@@ -19,7 +19,8 @@ import DialogContent from '@material-ui/core/DialogContent';
 import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
 import {Link} from 'react-router-dom';
-import Drawer from "../../Core/Layout/SuperAdminSideBar";
+
+import Drawer from '../../../Core/Layout/SuperAdminSideBar';
 const useStyles = makeStyles(theme => ({
   root: {
     display: 'flex',
@@ -56,9 +57,9 @@ color:"#ffffff",
 borderColor: "#007bff",
 
 };
+const AddStorageView = props=> {
 
 
-export default function UserRolesDropDown() {
   const classes = useStyles();
   const [values, setValues] = React.useState({
     age: '',
@@ -127,3 +128,4 @@ export default function UserRolesDropDown() {
     </div>
   );
 }
+export default AddStorageView;

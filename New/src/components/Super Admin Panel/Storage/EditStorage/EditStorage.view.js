@@ -2,7 +2,7 @@ import React from 'react';
 import { forwardRef } from 'react';
 import Container from "@material-ui/core/Container";
 import MaterialTable from 'material-table';
-import { makeStyles, lighten } from "@material-ui/core/styles";
+import { makeStyles} from "@material-ui/core/styles";
 import AddBox from '@material-ui/icons/AddBox';
 import ArrowUpward from '@material-ui/icons/ArrowUpward';
 import Check from '@material-ui/icons/Check';
@@ -18,7 +18,8 @@ import Remove from '@material-ui/icons/Remove';
 import SaveAlt from '@material-ui/icons/SaveAlt';
 import Search from '@material-ui/icons/Search';
 import ViewColumn from '@material-ui/icons/ViewColumn';
-import Drawer from "../../Core/Layout/SuperAdminSideBar";
+
+import Drawer from '../../../Core/Layout/SuperAdminSideBar';
 
 
 const useStyles = makeStyles(theme => ({
@@ -54,21 +55,21 @@ const tableIcons = {
     ViewColumn: forwardRef((props, ref) => <ViewColumn {...props} ref={ref} />)
   };
 
-export default function MaterialTableDemo() {
+const EditStorageView = props=> {
   const [state, setState] = React.useState({
     columns: [
-     
-      { title: 'Duration', field: 'Duration' },
+      { title: 'Storage', field: 'Storage' },
       { title: 'Price', field: 'Price' },
       
-      
+    
     ],
     data: [
         {
-           
-            Duration:'1 Month',
-            Price:'50$'
+        Storage:'20 GB',
+         Price:'20$'
+          
           },
+    
       
     ],
   });
@@ -80,7 +81,7 @@ export default function MaterialTableDemo() {
     <Drawer/>
     <Container maxWidth="md" component="main" className={classes.heroContent}>
     <MaterialTable icons={tableIcons}
-      title="Edit Plan"
+      title="Edit Users"
       columns={state.columns}
       data={state.data}
       editable={{
@@ -120,4 +121,6 @@ export default function MaterialTableDemo() {
     
     </div>
   );
-}
+};
+
+export default EditStorageView;

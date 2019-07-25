@@ -10,8 +10,8 @@ import Container from "@material-ui/core/Container";
 import logo from "../../Images/logo.png";
 import banner from "../../Images/managesales.jpg";
 import Link from "@material-ui/core/Link";
-import Footer from "../../Core/Layout/Footer";
-import Bar from "../../Core/Layout/NavBar";
+import Footer from "../../Core/Layout/Footer/Footer";
+import Bar from "../../Core/Layout/NavBar/NavBar";
 import { NavLink } from "react-router-dom";
 
 const useStyles = makeStyles(theme => ({

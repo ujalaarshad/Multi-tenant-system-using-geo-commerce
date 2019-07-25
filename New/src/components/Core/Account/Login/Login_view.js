@@ -13,8 +13,8 @@ import Container from '@material-ui/core/Container';
 import { withStyles } from '@material-ui/core/styles';
 import PropTypes from 'prop-types';
 import { NavLink } from 'react-router-dom'
-import Footer from "../../Layout/Footer";
-import Bar from "../../Layout/NavBar";
+import Footer from "../../Layout/Footer/Footer";
+import Bar from "../../Layout/NavBar/NavBar";
 
 const styles = theme => ({
   root: {

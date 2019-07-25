@@ -16,8 +16,8 @@ import MenuIcon from '@material-ui/icons/Menu';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
-import Bandwidth from '../../Super Admin Panel/Bandwidth/AddBandwidth';
-import Storage from '../../Super Admin Panel/Storage/AddStorage';
+import AddBandwidth from '../../Super Admin Panel/Bandwidth/AddBandwith/AddBandwidth';
+import Storage from '../../Super Admin Panel/Storage/AddStorage/AddStorage';
 import UserRolesDropDown from '../../Super Admin Panel/Generate Plans/GeneratePlan';
 import ListSubheader from '@material-ui/core/ListSubheader';
 import Collapse from '@material-ui/core/Collapse';
@@ -27,8 +27,8 @@ import ExpandLess from '@material-ui/icons/ExpandLess';
 import ExpandMore from '@material-ui/icons/ExpandMore';
 import StarBorder from '@material-ui/icons/StarBorder';
 import {Link} from 'react-router-dom';
-import Duration from '../../Super Admin Panel/Duration/AddDuration';
-import StaffAccounts from '../../Super Admin Panel/Staff Accounts/AddStaffAcounts';
+import Duration from '../../Super Admin Panel/Duration/AddDuration/AddDuration';
+import StaffAccounts from '../../Super Admin Panel/Staff Accounts/AddStaffAccounts/AddStaffAcounts';
 
 const drawerWidth = 240;
 
@@ -110,7 +110,7 @@ export default function ResponsiveDrawer(props) {
 
 const showMe =(text) => {
   if (selectItem==='Bandwidth'){
-    return( <div><Bandwidth/></div>);
+    return( <div><AddBandwidth/></div>);
 }
 else if (selectItem==='Storage')
 { return( <div><Storage/></div>);}

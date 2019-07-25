@@ -9,7 +9,8 @@ import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import Dropdown from '../dropdown';
 import Grid from '@material-ui/core/Grid';
-import Drawer from "../../../Core/Layout/AdminSideBar";
+
+import Drawer from '../../../Core/Layout/AdminSideBar/AdminSideBar';
 
 const useStyles = makeStyles(theme => ({
   '@global': {
