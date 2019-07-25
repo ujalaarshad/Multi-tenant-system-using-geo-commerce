@@ -34,7 +34,6 @@ import Roles from "../components/Admin Panel/Manage Roles/Roles/Roles";
 import ProfileManage from "../components/Core/Account/ProfileManage/Manage";
 
 class routes extends React.Component {
-<<<<<<< HEAD
   render() {
     return (
       <div className="App">
@@ -42,18 +41,23 @@ class routes extends React.Component {
           <Switch>
             <Route exact path="/EmailConfirmation" component={EmailConfirm} />
             <Route exact path="/table" component={ViewPlan} />
+
+            <Route exact path="/Storage" component={Storage} />
+            <Route exact path="/Bandwidth" component={Bandwidth} />
+            <Route exact path="/StaffAccounts" component={StaffAccounts} />
+            <Route exact path="/ADD_duration" component={Duration} />
+            <Route exact path="/edit_plan" component={EditPlan} />
             <Route exact path="/Register" component={Register} />
             <Route exact path="/CreateRoles" component={CreateRoles} />
             <Route exact path="/Roles" component={Roles} />
             <Route exact path="/Manage" component={ProfileManage} />
 
-            <Route exact path="/storage" component={Addstorage} />
             <Route
               exact
               path="/superadminpanel"
               component={SuperAdminSidebar}
             />
-            <Route exact path="/MaterialTableDemo" component={GeneratePlan} />
+            <Route exact path="/Plan" component={GeneratePlan} />
             <Route exact path="/SignIn" component={LoginView} />
             <Route
               exact
@@ -86,60 +90,6 @@ class routes extends React.Component {
       </div>
     );
   }
-=======
-    render(){
-        return (
-            <div className="App" >
-              
-              
-              
-              <Router>
-              
-              
-                <Switch>
-                  <Route exact path = "/EmailConfirmation" component={EmailConfirm}/>
-                  <Route exact path="/table" component={ViewPlan} />
-
-                  <Route exact path="/Storage" component={Storage} />
-                  <Route exact path="/Bandwidth" component={Bandwidth} />
-                  <Route exact path="/StaffAccounts" component={StaffAccounts} />
-                  <Route exact path="/ADD_duration" component={Duration} />
-                  <Route exact path="/edit_plan" component={EditPlan} />
-                  <Route exact path="/Register" component={Register} />
-                  <Route exact path="/CreateRoles" component={CreateRoles} />
-                  <Route exact path="/Roles" component={Roles} />
-                  <Route exact path="/Manage" component={ProfileManage} />
-
-                
-                  <Route exact path="/superadminpanel" component={SuperAdminSidebar} />
-                  <Route exact path="/Plan" component={GeneratePlan} />
-                  <Route exact path="/SignIn" component={LoginView} />
-                  <Route exact path="/featured_product" component={FeaturedProducts} />
-                  <Route exact path="/Increased_sale" component={increased_sales} />
-                  <Route exact path= "/Home" component={Home} />
-                  <Route exact path= "/Pricing" component={Pricing} />
-                  <Route exact path= "/EditUsers" component={UserEdit} />
-                  <Route exact path= "/Contactus" component={Cntctus} />
-                  <Route exact path= "/Aboutus" component={Abtus} />
-                  <Route exact path= "/dropdown" component={dropdown} />
-                  <Route exact path= "/AddUsers" component={Addusers} />
-                  <Route exact path= "/ForgetPassword" component={ForgetPassword} />
-                  <Route exact path= "/managesales" component={managesales} />
-                  <Route exact path= "/manageInventory" component={manageinvent} />
-                  <Route exact path= "/ForgetPassword/ConfirmFromEmail" component={ConfirmationCode} />
-                  <Route exact path= "/ForgetPassword/ConfirmFromEmail/CreateNewPassword" component={ConfirmNPass} />
-                  
-                </Switch>
-                
-              </Router>
-        
-              
-              
-            </div>
-          );
-    }
-  
->>>>>>> 98c810ae3d3b9ce0c9db8f25dcd84f01d88a11b7
 }
 
 export default routes;
