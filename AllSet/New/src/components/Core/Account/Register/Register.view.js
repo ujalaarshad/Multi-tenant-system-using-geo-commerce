@@ -9,7 +9,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import Container from "@material-ui/core/Container";
 import { NavLink } from "react-router-dom";
 import Footer from "../../Layout/Footer/Footer";
-import Bar from "../../Layout/NavBar/NavBar";
+import Bar from "../../Layout/Navbar/NavBar";
 
 const useStyles = makeStyles(theme => ({
   "@global": {

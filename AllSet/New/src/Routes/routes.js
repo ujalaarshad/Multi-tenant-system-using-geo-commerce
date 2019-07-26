@@ -13,6 +13,7 @@ import EditDuration from '../components/Super Admin Panel/Duration/EditDuration/
 import EditStorage from '../components/Super Admin Panel/Storage/EditStorage/EditStorage';
 import EditStaffAccounts from '../components/Super Admin Panel/Staff Accounts/EditStaffAccounts/EditStaffAccounts';
 import SuperAdminSidebar from "../components/Core/Layout/SuperAdminSideBar";
+import plan from '../components/Super Admin Panel/Generate Plans/GeneratePlan';
 import ConfirmationCode from '../components/Core/Account/ForgetPassword/ConfirmationCode/ConfirmationCode';
 import ForgetPassword from '../components/Core/Account/ForgetPassword/ForgetPassword.js';
 import ConfirmNPass from '../components/Core/Account/ForgetPassword/CreateNewPassword/CreateNewPassword';
@@ -27,6 +28,7 @@ import UserEdit from '../components/Admin Panel/Manage Users/EditUsers/EditUser'
 import Home from '../components/Services Accquisition Protocol/Home/Home.js';
 
 import ViewPlan from "../components/Super Admin Panel/table";
+import editplan from '../components/Super Admin Panel/Generate Plans/ViewPlans';
 
 import GeneratePlan from "../components/Super Admin Panel/Generate Plans/GeneratePlan";
 import LoginView from "../components/Core/Account/Login/Login_view"
@@ -34,12 +36,9 @@ import FeaturedProducts from "../components/Services Accquisition Protocol/Marke
 import increased_sales from "../components/Services Accquisition Protocol/Market/IncreasedSales";
 import Register from "../components/Core/Account/Register/Register";
 import EmailConfirm from '../components/Core/Account/Register/EmailConfirmation';
-import CreateRoles from "../components/Admin Panel/Manage Roles/CreateRoles";
-import Roles from "../components/Admin Panel/Manage Roles/Roles";
+import CreateRoles from "../components/Admin Panel/Manage Roles/CreateRoles/CreateRoles";
+import Roles from "../components/Admin Panel/Manage Roles/Roles/Roles";
 import ProfileManage from "../components/Core/Account/ProfileManage/Manage";
-
-
-
 
 class routes extends React.Component {
     render(){
@@ -52,8 +51,7 @@ class routes extends React.Component {
               
               
                 <Switch>
-                <Route exact path="/table" component={ViewPlan} />
-                  <Route exact path="/Register" component={Register} />
+                <Route exact path="/Register" component={Register} />
                   <Route exact path="/CreateRoles" component={CreateRoles} />
                   <Route exact path="/Roles" component={Roles} />
                   <Route exact path="/Manage" component={ProfileManage} />
@@ -74,13 +72,11 @@ class routes extends React.Component {
                   <Route exact path= "/manageInventory" component={manageinvent} />
                   <Route exact path= "/ForgetPassword/ConfirmFromEmail" component={ConfirmationCode} />
                   <Route exact path= "/ForgetPassword/ConfirmFromEmail/CreateNewPassword" component={ConfirmNPass} />
-                  
                   <Route exact path= "/Contactus" component={Cntctus} />
                   <Route exact path= "/Pricing" component={Pricing} />
                   <Route exact path= "/Aboutus" component={Abtus} />
                   <Route exact path= "/ADD_duration" component={AddDuration} />
                   <Route exact path= "/Storage" component={AddStorage} />
-            
                   <Route exact path= "/Bandwidth" component={AddBandwidth} />
                   <Route exact path= "/StaffAccounts" component={AddStaffAccounts} />
                   <Route exact path= "/edit_bandwidth" component={EditBandwidth} />
@@ -88,6 +84,9 @@ class routes extends React.Component {
                   <Route exact path= "/edit_storage" component={EditStorage} />
                   <Route exact path= "/edit_staffAccounts" component={EditStaffAccounts} />
                   <Route exact path="/superadminpanel" component={SuperAdminSidebar} />
+                 
+                  <Route exact path="/plan" component={plan} /> 
+                  <Route exact path="/edit_plan" component={editplan} /> 
                 </Switch>
                 
               </Router>

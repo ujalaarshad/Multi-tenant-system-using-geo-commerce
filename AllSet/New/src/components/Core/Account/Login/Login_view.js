@@ -14,7 +14,7 @@ import { withStyles } from '@material-ui/core/styles';
 import PropTypes from 'prop-types';
 import { NavLink } from 'react-router-dom'
 import Footer from "../../Layout/Footer/Footer";
-import Bar from "../../Layout/NavBar/NavBar";
+import NavBar from "../../Layout/Navbar/NavBar";
 
 const styles = theme => ({
   root: {
@@ -58,7 +58,7 @@ class HigherOrderComponent extends React.Component {
     const { classes } = this.props;
     return (
       <div>
-        <Bar/>
+        <NavBar/>
     <Container component="main" maxWidth="xs">
       <CssBaseline />
       <div className={classes.paper}>
