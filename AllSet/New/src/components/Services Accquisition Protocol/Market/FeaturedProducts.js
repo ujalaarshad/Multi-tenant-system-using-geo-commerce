@@ -49,14 +49,7 @@ export default function Blog() {
         
         
         <main>
-          {/* Main featured post */}
-          
-          {/* End main featured post */}
-          {/* Sub featured posts */}
-          
-          {/* End sub featured posts */}
           <Grid container spacing={5} className={classes.mainGrid}>
-            {/* Main content */}
             <Grid item xs={12} md={7}>
               <Typography variant="h6" gutterBottom align={"left"}>
               <h1>Market your business</h1>
@@ -79,11 +72,7 @@ export default function Blog() {
 
             <Grid item xs={12} md={5} align="center" >
                 <br/>
-                <br/>
-                
-                
-                
-                    
+                <br/> 
                 < Image  src ={banner} style={newStyles} />
                 
                 <br/>
