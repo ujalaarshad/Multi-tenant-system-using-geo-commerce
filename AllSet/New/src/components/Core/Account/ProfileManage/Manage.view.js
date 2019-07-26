@@ -20,7 +20,11 @@ const useStyles = makeStyles(theme => ({
     display: "flex"
   },
   heroContent: {
-    padding: theme.spacing(12, 0, 6)
+    marginTop: theme.spacing(12),
+    paddingRight: theme.spacing(6),
+    [theme.breakpoints.down("md")]: {
+      marginRight: theme.spacing(5)
+    }
   },
   paper: {
     marginTop: theme.spacing(6)
@@ -46,7 +50,7 @@ const Manage = props => {
   return (
     <div className={classes.root}>
       <Drawer />
-      <Container maxWidth="sm" component="main" className={classes.heroContent}>
+      <Container maxWidth="md" component="main" className={classes.heroContent}>
         <CssBaseline />
         <div className={classes.topHeading}>
           <Typography

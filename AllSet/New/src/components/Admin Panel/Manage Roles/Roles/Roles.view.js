@@ -27,6 +27,9 @@ const useStyles = makeStyles(theme => ({
     [theme.breakpoints.up("sm")]: {
       marginLeft: theme.spacing(8),
       marginRight: theme.spacing(5)
+    },
+    [theme.breakpoints.down("sm")]: {
+      marginRight: theme.spacing(5)
     }
   },
   table: {
