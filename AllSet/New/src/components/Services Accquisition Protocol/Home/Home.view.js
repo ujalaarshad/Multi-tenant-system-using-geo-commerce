@@ -13,6 +13,7 @@ import Link from "@material-ui/core/Link";
 import Footer from "../../Core/Layout/Footer/Footer";
 import Bar from "../../Core/Layout/Navbar/NavBar";
 import { NavLink } from "react-router-dom";
+import Image from "material-ui-image";
 
 const useStyles = makeStyles(theme => ({
   "@global": {
@@ -51,6 +52,11 @@ const useStyles = makeStyles(theme => ({
     alignItems: "center"
   }
 }));
+
+const newStyles = {
+  height: 280,
+  padding: "0 30px"
+};
 
 const HomeView = props => {
   const classes = useStyles();
@@ -91,7 +97,7 @@ const HomeView = props => {
           <Container maxWidth="md" className={classes.paragraphStyle}>
             <Grid container spacing={5} className={classes.imageStyle}>
               <Grid item xs={12} md={10}>
-                <img width="100%" height="auto" src={banner} />
+                <Image src={banner} style={newStyles} />
               </Grid>
             </Grid>
           </Container>
@@ -121,7 +127,7 @@ const HomeView = props => {
 
             <Grid item xs={12} md={5} className={classes.imageStyle}>
               <Paper className={classes.paperStyle}>
-                <img width="100%" height="320px" src={banner} />
+                <Image src={banner} style={newStyles} />
               </Paper>
             </Grid>
           </Grid>
@@ -129,7 +135,7 @@ const HomeView = props => {
           <Grid container spacing={5} className={classes.responsiveDirection}>
             <Grid item xs={12} md={5} className={classes.imageStyle}>
               <Paper className={classes.paperStyle}>
-                <img width="100%" height="320px" src={banner} />
+                <Image src={banner} style={newStyles} />
               </Paper>
             </Grid>
 
@@ -199,7 +205,7 @@ const HomeView = props => {
 
             <Grid item xs={12} md={5} className={classes.imageStyle}>
               <Paper className={classes.paperStyle}>
-                <img width="100%" height="320px" src={banner} />
+                <Image src={banner} style={newStyles} />
               </Paper>
             </Grid>
           </Grid>
@@ -207,7 +213,7 @@ const HomeView = props => {
           <Grid container spacing={5} className={classes.responsiveDirection}>
             <Grid item xs={12} md={5} className={classes.imageStyle}>
               <Paper className={classes.paperStyle}>
-                <img width="100%" height="320px" src={banner} />
+                <Image src={banner} style={newStyles} />
               </Paper>
             </Grid>
 
